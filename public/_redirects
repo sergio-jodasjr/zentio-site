@@ -1,2 +1,3 @@
  /blog  /insights  301
 /blog/* /insights/:splat 301
+/forms.html  /  301
