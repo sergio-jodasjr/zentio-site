@@ -1,0 +1,2 @@
+ /blog  /insights  301
+/blog/* /insights/:splat 301

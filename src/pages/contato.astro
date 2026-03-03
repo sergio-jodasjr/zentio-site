@@ -1,0 +1,51 @@
+﻿---
+import SiteLayout from "../layouts/SiteLayout.astro";
+---
+
+<SiteLayout title="Contato | Zentio" lang="pt">
+  <h1>Contato comercial</h1>
+  <p>Solicite contato com especialistas. Resposta em até <b>1 dia útil</b>.</p>
+
+  <form name="zentio-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contato-sucesso">
+    <input type="hidden" name="form-name" value="zentio-contact" />
+    <p style="display:none">
+      <label>Não preencha isso: <input name="bot-field" /></label>
+    </p>
+
+    <p><label>Nome completo*<br/>
+      <input required name="name" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:12px" />
+    </label></p>
+
+    <p><label>Empresa*<br/>
+      <input required name="company" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:12px" />
+    </label></p>
+
+    <p><label>E-mail corporativo*<br/>
+      <input required type="email" name="email" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:12px" />
+    </label></p>
+
+    <p><label>WhatsApp*<br/>
+      <input required name="whatsapp" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:12px" />
+    </label></p>
+
+    <p><label>País*<br/>
+      <select required name="country" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:12px">
+        <option value="">Selecione</option>
+        <option>Brasil</option>
+        <option>Reino Unido</option>
+        <option>EUA</option>
+      </select>
+    </label></p>
+
+    <p><label>Quais rotinas você quer automatizar?*<br/>
+      <textarea required name="message" rows="5" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:12px"></textarea>
+    </label></p>
+
+    <p style="display:flex;gap:10px;flex-wrap:wrap">
+      <button class="btn btn-primary" type="submit">Solicitar contato</button>
+      <a class="btn" href="https://wa.me/5511940875900">Falar no WhatsApp</a>
+    </p>
+
+    <p style="color:var(--muted)">contato@zentio.com.br • www.zentio.com.br</p>
+  </form>
+</SiteLayout>
