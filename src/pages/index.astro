@@ -1,49 +1,65 @@
----
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+﻿---
+import SiteLayout from "../layouts/SiteLayout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<SiteLayout title="Zentio | Automação B2B e SaaS" lang="pt">
+  <span class="badge">Brasil • Reino Unido • EUA</span>
+
+  <h1>Automação de rotinas B2B para escalar sua operação.</h1>
+  <p>A Zentio desenvolve automações e soluções SaaS para eliminar tarefas manuais, integrar sistemas e padronizar processos — com arquitetura segura e pronta para crescer.</p>
+
+  <p style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+    <a class="btn btn-primary" href="/contato">Solicitar contato com especialistas</a>
+    <a class="btn btn-ghost" href="https://wa.me/5511940875900" target="_blank" rel="noreferrer">Falar no WhatsApp</a>
+  </p>
+
+  <p style="color:var(--muted)">Resposta em até <b>1 dia útil</b>.</p>
+
+  <hr style="border:none;border-top:1px solid var(--border);margin:28px 0" />
+
+  <h2 style="margin:0 0 10px">O que entregamos</h2>
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px">
+    <div style="border:1px solid var(--border);border-radius:12px;padding:14px">
+      <b>Automações de rotinas</b>
+      <p style="margin-top:8px">Aprovações, validações, alertas, tarefas recorrentes e fluxos operacionais.</p>
+    </div>
+    <div style="border:1px solid var(--border);border-radius:12px;padding:14px">
+      <b>Integrações entre sistemas</b>
+      <p style="margin-top:8px">APIs e webhooks conectando ERP, CRM, WhatsApp, e-mail e planilhas.</p>
+    </div>
+    <div style="border:1px solid var(--border);border-radius:12px;padding:14px">
+      <b>SaaS e painéis operacionais</b>
+      <p style="margin-top:8px">Dashboards, permissões, multiusuário e governança para escalar.</p>
+    </div>
+  </div>
+
+  <div style="margin-top:26px">
+    <h2 style="margin:0 0 10px">Casos de uso</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px">
+      <div style="border:1px solid var(--border);border-radius:12px;padding:12px">Operações</div>
+      <div style="border:1px solid var(--border);border-radius:12px;padding:12px">Financeiro</div>
+      <div style="border:1px solid var(--border);border-radius:12px;padding:12px">Comercial</div>
+      <div style="border:1px solid var(--border);border-radius:12px;padding:12px">Suporte</div>
+      <div style="border:1px solid var(--border);border-radius:12px;padding:12px">RH/Backoffice</div>
+      <div style="border:1px solid var(--border);border-radius:12px;padding:12px">Compliance</div>
+    </div>
+
+    <p style="margin-top:12px">
+      <a class="btn btn-ghost" href="/casos-de-uso">Ver casos de uso</a>
+    </p>
+  </div>
+
+  <hr style="border:none;border-top:1px solid var(--border);margin:28px 0" />
+
+  <h2 style="margin:0 0 10px">Como funciona</h2>
+  <ol>
+    <li><b>Contato comercial</b> — entendimento do cenário e objetivos</li>
+    <li><b>Blueprint</b> — desenho do fluxo e integrações</li>
+    <li><b>Implementação</b> — ciclos curtos com validação</li>
+    <li><b>Evolução</b> — melhoria contínua e novas rotinas</li>
+  </ol>
+
+  <p style="margin-top:12px">
+    <a class="btn btn-primary" href="/contato">Solicitar contato</a>
+  </p>
+</SiteLayout>
